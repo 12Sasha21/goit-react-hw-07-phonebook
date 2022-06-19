@@ -30,7 +30,11 @@ export default function SignupForm() {
 
   const handleButtonSubmit = e => {
     e.preventDefault();
-    contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
+    contacts.some(
+      contact =>
+        contact.name.toLowerCase() === name.toLowerCase() ||
+        contact.number === number
+    )
       ? alert(`${name} is already in contacts.`)
       : dispatch(addContact({ name, number }));
     reset();

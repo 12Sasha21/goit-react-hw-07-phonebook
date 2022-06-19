@@ -1,1 +1,1 @@
-export const getFilterValue = state => state.contacts.filter;
+export const getFilterValue = (state) => state.contacts.filter;
